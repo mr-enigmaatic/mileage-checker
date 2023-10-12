@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;700&family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;   
+}
+
+/* Form CSS */
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/img/carousel.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+.box-area{
+    width: 700px;
+    background: linear-gradient(rgb(0, 0, 0,0.1)0%, rgba(0, 0, 0,1)100%);
+    
+}
+.left-box{
+    background: transparent;
+}
+.right-box{
+    padding: 10px 30px 40px 40px;
+    border-radius: 10px;
+}
+.right-box input{
+    text-align: center;
+}
+
+::placeholder{
+    font-size: 14px;
+}
+
+/* Mobile CSS */
+
+@media only screen and (max-width: 768px){
+
+    .box-area{
+        margin: 0 10px;
+        width: 400px;
+        background: linear-gradient(rgba(0,0,0,0.3)100%, rgba(0,0,0,0.3)0%);
+        
+    }
+    .left-box{
+        height: 200px;
+        overflow: hidden;
+    }
+    .right-box{
+        padding: 20px;
+    }
+}
+
+/* Result CSS */
+#popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)scale(0.1);
+    text-align: center;
+    padding: 0px 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s;
+
+}
+.open{
+    transform: translate(-50%,-50%)scale(1);
+    visibility: visible;
+}
+#popup img{
+    width: 100px;
+    margin-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+#popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 0px 0px 10px;
+}
+#popup button{
+    width: 50%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}

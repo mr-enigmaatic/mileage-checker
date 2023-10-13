@@ -16,7 +16,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(/img/carousel.jpg);
+    background-image: url(../img/carousel.jpg);
     background-size: cover;
     background-position: center;
 
@@ -32,6 +32,7 @@ body{
 .right-box{
     padding: 10px 30px 40px 40px;
     border-radius: 10px;
+    z-index: 1;
 }
 .right-box input{
     text-align: center;
@@ -74,9 +75,10 @@ body{
     color: #333;
     visibility: hidden;
     transition: transform 0.4s;
+    z-index: 2;
 
 }
-.open{
+#popup.open{
     transform: translate(-50%,-50%)scale(1);
     visibility: visible;
 }

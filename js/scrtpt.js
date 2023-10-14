@@ -19,6 +19,10 @@ let regEx = /^[0-9]+$/
 subBtn.addEventListener('click', validateForm);
 
 function validateForm() {
+    console.log(reserve1.value);
+    console.log(reserve2.value);
+    console.log(typeof reserve1.value);
+    console.log(typeof reserve2.value);
 
 if(!reserve1.value.match(regEx)) {
     error.innerText = "Invalid Input!!!";

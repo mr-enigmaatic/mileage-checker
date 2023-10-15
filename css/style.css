@@ -10,7 +10,36 @@ body{
     font-family: 'Poppins', sans-serif;   
 }
 
-/* Form CSS */
+/*====== Header section =======*/
+.navbar{
+    background:linear-gradient(to bottom, rgba(0,0,0,1)0%, rgba(0,0,0,0)100%);
+    position: absolute;
+    width: 100%;
+    height: 80px;
+}
+.navbar a{
+    font-weight: 700;
+    color: white;
+    font-size: 28px;
+}
+.navbar img{
+    width: 50px;
+    /* border-radius: 50%;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 1); */
+    
+}
+
+/* Mobile CSS */
+@media only screen and (max-width: 768px){
+    .navbar a{
+        font-size: 22px;
+    }
+    .navbar img{
+        width: 40px;
+    }
+}
+
+/* ==== form content ===== */
 .form-container{
     display: flex;
     justify-content: center;
@@ -23,12 +52,14 @@ body{
 }
 .box-area{
     width: 700px;
-    background: linear-gradient(rgb(0, 0, 0,0.1)0%, rgba(0, 0, 0,1)100%);
-    
+    background: linear-gradient(rgb(0, 0, 0,0.1)0%, rgba(0, 0, 0,1)100%);   
 }
+
 .left-box{
     background: transparent;
 }
+
+
 .right-box{
     padding: 10px 30px 40px 40px;
     border-radius: 10px;
@@ -43,19 +74,32 @@ body{
 }
 
 /* Mobile CSS */
-
 @media only screen and (max-width: 768px){
-
     .box-area{
         margin: 0 10px;
+        margin-top: 100px;
         width: 400px;
-        background: linear-gradient(rgba(0,0,0,0.3)100%, rgba(0,0,0,0.3)0%);
+        background: transparent;
         
     }
     .left-box{
-        
         overflow: hidden;
     }
+    .left-box h3{
+        background: linear-gradient(90deg,rgb(255, 255, 255,0.8)25%, rgba(0, 0, 0,0)40%);
+        border-radius: 50px;
+        padding: 5px 30px;
+        width: 100%;
+        
+    }
+    .steps-container{
+        background: linear-gradient(45deg, black, transparent);
+        margin-bottom: 10px;
+        padding: 16px 8px 0px;
+        width: 365px;
+        border-radius: 10px;
+    }
+
     .right-box{
         padding: 20px;
     }

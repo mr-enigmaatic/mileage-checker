@@ -1,7 +1,7 @@
 // ====== Mileage Tracker =======
 
 // ====== Form validation ======
-
+let boxArea = document.querySelector(".box-area");
 let subBtn = document.getElementById('submit');
 let fuelPrice = document.getElementById("fuelPrice");
 let fuelAmount = document.getElementById("fuelAmount");
@@ -110,10 +110,12 @@ resultEl.innerHTML = "";
 
 // Function for opening Popup
 function openPopup(){
-popup.classList.add("open");
+    popup.classList.add("open");
+    boxArea.classList.add("blur");
 }
 
 // Function for Closing Popup
 function closePopup(){
 popup.classList.remove("open");
+boxArea.classList.remove("blur");
 }

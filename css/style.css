@@ -52,7 +52,13 @@ body{
 }
 .box-area{
     width: 700px;
-    background: linear-gradient(rgb(0, 0, 0,0.1)0%, rgba(0, 0, 0,1)100%);   
+    background: linear-gradient(rgb(0, 0, 0,0.1)0%, rgba(0, 0, 0,1)100%); 
+    transition: filter 0.4s;  
+}
+.box-area.blur{
+    filter: blur(400px);
+    pointer-events: none;
+    user-select: none;
 }
 
 .left-box{

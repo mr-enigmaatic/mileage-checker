@@ -1,6 +1,6 @@
 // ====== Mileage Tracker =======
 
-// ====== Form validation ======
+
 let boxArea = document.querySelector(".box-area");
 let subBtn = document.getElementById('submit');
 let fuelPrice = document.getElementById("fuelPrice");
@@ -14,10 +14,23 @@ let resultHead = popup.querySelector('h2');
 let resultEl = popup.querySelector('span');
 let mileage;
     
-let regEx = /^[0-9]+$/
+let regEx = /^\d+(\.\d+)?$/
 
-subBtn.addEventListener('click', validateForm);
+subBtn.addEventListener('click', handleSubmit);
 
+function handleSubmit() {
+    if(validateForm()){
+        checkMileage();
+        popupReset();
+        configPopup();
+        openPopup();
+    }else{
+        return false;
+    }
+}
+
+
+// ====== Form validation ======
 function validateForm() {
     console.log(reserve1.value);
     console.log(reserve2.value);
@@ -44,30 +57,24 @@ if(!reserve1.value.match(regEx)) {
     error.innerText = "Invalid Input!!!";
     return false
 
+}else if(reserve2.value < reserve1.value){
+    error.style.visibility = "visible";
+    error.innerText = "Invalid Meeter Reading!!!";
+    return false
 }
-
-// else if(reserve2.value < reserve1.value){
-//   error.style.visibility = "visible";
-//   error.innerText = "Invalid Meeter Reading!!!";
-//   return false
-
-// }
-
 else{
     error.innerHTML = '';
-    checkMileage();
-    
+    return true   
+ }
 }
-}
+
+
 
 // Function for checking mileage
 function checkMileage(){
 let distance = (reserve2.value - reserve1.value);  
 let fuelQuantity = (fuelAmount.value / fuelPrice.value);
 mileage = (distance / fuelQuantity);
-popupReset();
-configPopup();
-openPopup();
 }
 
 // Function for Configuring Result Popup

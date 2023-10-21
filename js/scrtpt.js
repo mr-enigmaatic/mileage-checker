@@ -13,6 +13,7 @@ let resultImage = popup.querySelector('img');
 let resultHead = popup.querySelector('h2');
 let resultEl = popup.querySelector('span');
 let mileage;
+let roundedMileage;
     
 let regEx = /^\d+(\.\d+)?$/
 
@@ -75,36 +76,37 @@ function checkMileage(){
 let distance = (reserve2.value - reserve1.value);  
 let fuelQuantity = (fuelAmount.value / fuelPrice.value);
 mileage = (distance / fuelQuantity);
+roundedMileage = Math.round(mileage*10)/10;
 }
 
 // Function for Configuring Result Popup
 function configPopup() {
-if(mileage > 70) {
+if(roundedMileage > 70) {
     resultImage.setAttribute('src', './img/woww.png')
     resultHead.innerHTML = "WooowwW!!!";
-    resultEl.innerHTML = `Your Mileage is <strong>${mileage} Kms/L</strong>`;
+    resultEl.innerHTML = `Your Mileage is <strong>${roundedMileage} Kms/L</strong>`;
 }
-else if(mileage > 50) {
+else if(roundedMileage > 50) {
     resultImage.setAttribute('src', './img/great-express.png')
     resultHead.innerHTML = "Great!!!";
-    resultEl.innerHTML = `Your Mileage is <strong>${mileage} Kms/L</strong>`;
+    resultEl.innerHTML = `Your Mileage is <strong>${roundedMileage} Kms/L</strong>`;
 }
-else if(mileage > 40) {
+else if(roundedMileage > 40) {
     resultImage.setAttribute('src', './img/nice.png')
     resultHead.innerHTML = "Nice!!!";
-    resultEl.innerHTML = `Your Mileage is <strong>${mileage} Kms/L</strong>`;
+    resultEl.innerHTML = `Your Mileage is <strong>${roundedMileage} Kms/L</strong>`;
 }
 
-else if(mileage > 30) {
+else if(roundedMileage > 30) {
     resultImage.setAttribute('src', './img/ooops.png')
     resultHead.innerHTML = "Oooopsss!!!";
-    resultEl.innerHTML = `Your Mileage is <strong>${mileage} Kms/L</strong>`;
+    resultEl.innerHTML = `Your Mileage is <strong>${roundedMileage} Kms/L</strong>`;
     
 }
 else{
     resultImage.setAttribute('src', './img/sad.png')
     resultHead.innerHTML = "Ooohh Daarkk!!!";
-    resultEl.innerHTML = `Your Mileage is <strong>${mileage} Kms/L</strong>`;
+    resultEl.innerHTML = `Your Mileage is <strong>${roundedMileage} Kms/L</strong>`;
 }
 }
 

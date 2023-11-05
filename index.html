@@ -9,6 +9,10 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- AOS animation CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="./css/style.css">
     <title>Mileage Checker</title>
   </head>
@@ -28,23 +32,24 @@
       <!-- ====== content section ======== -->
       <div class="form-container">
           <div class="box-area row  rounded   p-3  shadow position-relative">
+
             <!-- Left Section -->
 
             <div class=" left-box col-md-6 rounded-3 d-flex justify-content-center align-items-center flex-column">
               <div class="featured-image position-absolute" style="display: none;">
                 <img src="./img/speed2.jpg" class="imgfluid mb-3" style="width: 100%;">
               </div>
-              <h3 class="text-warning">Hello, <span class="text-white fs-1 fw-bold">Buddy</span></h3>
-              <p class="text-white text-wrap text-sm-start text-md-center">here is a simple method to check your vechle Mileage</p>
+              <h3 data-aos="fade-right" class="text-warning">Hello, <span class="text-white fs-1 fw-bold">Buddy</span></h3>
+              <p data-aos="fade-down" class=" text-white text-wrap text-sm-start text-md-center">here is a simple <span class="shadow bg-warning rounded-pill px-2 text-light fst-italic fw-bold">reserve-to-reserve</span> method to check your vechle Mileage</p>
 
-              <div class="steps-container">
+              <div data-aos="fade-up" class="steps-container">
                 <div class="steps mb-2 d-flex justify-content-start align-items-start w-100">
                   <div class="step-head p-0 text-end me-2" style="width: 20%;">
-                  <small class="rounded text-start p-1 bg-warning  text-light">Step 1</small>
-                </div>
-                <div style="width: 80%;">
-                  <span class=" text-start text-light">note down your first meter reading when fuel level falls to reserve.</span>
-                </div>
+                    <small class="rounded text-start p-1 bg-warning  text-light">Step 1</small>
+                  </div>
+                  <div style="width: 80%;">
+                    <span class=" text-start text-light">note down your first meter reading when fuel level falls to reserve.</span>
+                  </div>
                 </div>
 
                 <div class="steps mb-3 d-flex justify-content-start align-items-start w-100">
@@ -71,21 +76,21 @@
             </div>
 
             <!-- Right Section -->
-            <div class="right-box col-md-6 bg-light">
+            <div data-aos="zoom-in" class="right-box col-md-6 bg-light">
               <div class="row align-items-center">
                 <form action=""">
                   <div class="header-text mb-4">
-                    <h2 class="m-0 fw-bold text-warning">Lets Check!</h2>
+                    <h2 class="m-0 fw-bold text-warning">Let's Check!</h2>
                     <p class="text-primary">how far you will go with 1L fuel!</p>
                   </div>
                   <div class="input-group mb-3">
-                    <input type="text" id="reserve1" class="form-control form-control-lg bg-light fs-6" placeholder="Enter First Reserve Reading">
+                    <input type="text" id="startReading" class="form-control form-control-lg bg-light fs-6" placeholder="Enter First Reserve Reading">
                   </div>
                   <div class="input-group mb-3">
-                    <input type="text" id="reserve2" class="form-control form-control-lg bg-light fs-6" placeholder="Enter Second Reserve Reading">
+                    <input type="text" id="endReading" class="form-control form-control-lg bg-light fs-6" placeholder="Enter Second Reserve Reading">
                   </div>
                   <div class="input-group mb-3">
-                    <input type="text" id="fuelAmount" class="form-control form-control-lg bg-light fs-6" placeholder="Enter Amount of Fuel Filled">
+                    <input type="text" id="fuelCost" class="form-control form-control-lg bg-light fs-6" placeholder="Enter Total Fuel Cost">
                   </div>
                   <div class="input-group mb-3">
                     <input type="text" id="fuelPrice" class="form-control form-control-lg bg-light fs-6" placeholder="Enter Current Fuel Price per Litter">
@@ -94,7 +99,7 @@
                     <span id="error"></span>
                   </div>
                   <div class="input-group mb-3 d-flex justify-content-center">
-                    <button type="button" id="submit" class="btn btn-lg btn-warning text-white w-75 fs-6"> Check Mileage</button>
+                    <button type="button" id="submit" onclick="calculateMileage()" class="btn btn-lg btn-warning text-white w-75 fs-6"> Check Mileage</button>
                   </div>
                 </form>
               </div>
@@ -120,6 +125,11 @@
     
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="./js/scrtpt.js"></script>
+    
+    <!-- AOS Animation script CDN -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script src="./js/script.js"></script>
+
   </body>
 </html>

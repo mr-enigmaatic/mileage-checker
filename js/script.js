@@ -1,8 +1,7 @@
 // ====== Mileage Tracker =======
 
 
-// Animation
-AOS.init();
+
 
 
 let mileage;
@@ -96,3 +95,17 @@ function closePopup(){
     popup.classList.remove("open");
     boxArea.classList.remove("blur");
 }
+
+
+// ===== scroll reveal ==========
+ScrollReveal({ 
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.left-box h3, .heading', { origin: 'left' });
+ScrollReveal().reveal('.left-box p', { origin: 'right' });
+ScrollReveal().reveal('.steps-container', { distance: '0px', scale: .8 });
+ScrollReveal().reveal('.right-box', {origin: 'bottom'});

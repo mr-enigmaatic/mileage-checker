@@ -105,7 +105,7 @@ ScrollReveal({
     delay: 200
 });
 
-ScrollReveal().reveal('.left-box h3, .heading', { origin: 'left' });
+ScrollReveal().reveal('.left-box h3', { origin: 'left' });
 ScrollReveal().reveal('.left-box p', { origin: 'right' });
 ScrollReveal().reveal('.steps-container', { distance: '0px', scale: .8 });
 ScrollReveal().reveal('.right-box', {origin: 'bottom'});

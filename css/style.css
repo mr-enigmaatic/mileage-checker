@@ -5,6 +5,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
 body{
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;   
